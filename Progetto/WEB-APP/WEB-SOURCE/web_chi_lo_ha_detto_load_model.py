@@ -11,17 +11,15 @@ cgitb.enable()
 #LIBRERIE USATE
 
 import pandas as pd
-import re
 from IPython.display import display, HTML
+import joblib
+import sys
+import eli5
 import warnings
 warnings.simplefilter('ignore')
 
-#MAIN
-import joblib
-import sys
-
-message = sys.argv[1]#'Lasciatemi cantare con la chitarra in mano lasciatemi cantare sono un italiano Buongiorno Italia gli spaghetti al dente e un partigiano come Presidente autoradio sempre nella mano destra'
-type_mes = sys.argv[2]#'POLITICO'
+message = sys.argv[1]
+type_mes = sys.argv[2]
 
 filename ='../WEB-DATA/MODELS/'+sys.argv[2]+'.sav'
 clas = joblib.load(filename)
@@ -38,7 +36,6 @@ df['Max'] = result[clas.classes_.tolist()].idxmax(axis=1)
 
 output = []
 
-import eli5
 s = eli5.show_weights(clas, vec=vect, target_names=clas.classes_).data
 s = s.replace("\n","")
 
