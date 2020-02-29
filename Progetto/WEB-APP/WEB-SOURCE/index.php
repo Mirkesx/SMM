@@ -29,7 +29,7 @@
 		$persona = substr($tokens[0], 1, strlen($tokens[0])-2);
 		$prob = substr($tokens[1], 7, strlen($tokens[1])-3);
 		$table_weights = substr($tokens[2], 3, strlen($tokens[2])-4);
-		$table_explainations = substr($tokens[3], 2, strlen($tokens[3])-2);
+		$table_explainations = substr($tokens[3], 2, strlen($tokens[3])-3);
 	}
 ?>
 
@@ -64,8 +64,6 @@
 				echo "<h2>Features utilizzate nella scelta</h2>Questo gruppo di tabelle indicano invece le probabilità e i punteggi che il classificatore ha dato per ogni etichetta.<br>Se posizioni il mouse sopra alle parole colorate potrai vedere di quanto hanno migliorato o peggiorato il punteggio.<br><br><br>";
 
 				echo $table_explainations."<br><br>";
-
-				echo $output;
 			}
 			else {
 		?>
