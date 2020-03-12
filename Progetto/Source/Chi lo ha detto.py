@@ -627,11 +627,6 @@ def cleanTweet(raw_data):
 #Gestisce l'accesso alle API di Twitter
 def getAPI(ck, cs, atk, ats):
     
-    ck = 'Tck3q8BKObFM3IspZC4ciF1l9'
-    cs = 'iMcU8xUMsvAssYBL4wiOOi0kanqZzm7Kl41OGkBNeb86kMIxc0'
-    atk = '717687265812721667-k1GQTWpwsH7VtEC6gKLwETgQz9otPNz'
-    ats = 'bEITKPKgwMBomofe42oKWgUNc8dPeWGlfU8wS5XbM5tnj'
-    
     twitter_keys = {
         'consumer_key':        ck,
         'consumer_secret':     cs,
